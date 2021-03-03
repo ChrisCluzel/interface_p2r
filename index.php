@@ -12,14 +12,20 @@
   else
   	$uc = $_REQUEST['uc'];
 
+
+//controleur PRINCIPAL
   switch($uc)
   {
       case 'accueil':
         {include("view/v_accueil.html");}
         break;
 
+
+          // action du form de selection du fichier
         case 'loadCatalogue':
           {
+
+
             include("controler/c_traitementCSV.php");
 
           }

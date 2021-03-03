@@ -5,7 +5,15 @@
 <body>
 <?php
         $action = $_REQUEST['action'];
+
+
+
+
+
         switch ($action) {
+
+
+          //traitement pour fournisseur P2r
           case 'read_p2r':
             read_csv();
             break;
