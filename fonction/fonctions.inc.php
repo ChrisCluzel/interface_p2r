@@ -22,7 +22,10 @@ function read($csv){
 
 
 
-function read_csv(){
+
+
+
+    function load_csv(){
     $nomOrigine = $_FILES['cataloguecsv']['name'];
     $elementsChemin = pathinfo($nomOrigine);
 

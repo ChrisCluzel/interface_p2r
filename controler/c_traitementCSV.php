@@ -15,7 +15,7 @@
 
           //traitement pour fournisseur P2r
           case 'read_p2r':
-            read_csv();
+            load_csv();
             break;
 
         }
