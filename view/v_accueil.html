@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>gestion Cdiscount</title>
+  </head>
+  <body>
+
+    <h2>Application Cdiscount</h2>
+
+  <form enctype="multipart/form-data" action="index.php?uc=loadCatalogue&action=read_p2r" method="post">
+    <input type="hidden" name="MAX_FILE_SIZE" value="1000000000000" />
+    Transfère le fichier <input type="file" name="cataloguecsv" accept=".csv" />
+
+    <br>
+    <div class="form-group">
+     <label for=motifM>Fournisseur entrée</label>
+     <select name="Fournisseur">
+        <option value="p2r">P2R</option>
+        <option value="Europacc">Europacc</option>
+        <option value="Compétition régionale">a complété</option>
+        <option value="Réunion">a corrigé</option>
+    </select>
+    </div>
+
+
+      <input type="submit" />
+  </form>
+
+  </body>
+</html>
