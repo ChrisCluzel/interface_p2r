@@ -46,7 +46,8 @@ function read($csv){
       $repertoireDestination = dirname(__DIR__) . '\in\/';
       $nomDestination = "cataloguecsv_temp".".".$extensionFichier;
 
-      if (move_uploaded_file($_FILES["cataloguecsv"]["tmp_name"], $repertoireDestination.$nomDestination)) {
+      if (move_uploaded_file($_FILES["cataloguecsv"]["tmp_name"], $repertoireDestination.$nomDestination))
+      {
           echo "Le fichier temporaire ".
                   " a été déplacé vers ".$repertoireDestination.$nomDestination;
       } else {
@@ -59,12 +60,30 @@ function read($csv){
       $csv = $repertoireDestination.$nomDestination;
 
       $csv = read($csv);
-
-      echo '<pre>';
-      print_r($csv);
-      echo '</pre>';
+      createRQT($csv);
+      // echo '<pre>';
+      // print_r($csv);
+      // echo '</pre>';
+      }
     }
-}
+  function createRQT($csv)
+  	{
+      $monPdo = $_SESSION['pdo'];
+  		 foreach ($csv as $ligne) {
+
+
+
+         $rqt = "insert into  produitp2r VALUES(".$ligne[0].", '".$ligne[1]."', ".$ligne[2].", ".$ligne[3].", ".$ligne[4].", ".$ligne[5].", '".$ligne[6]."', null , ".$ligne[8].",  '".$ligne[9]."'," .$ligne[10].")";
+        $res = $monPdo->push_into_bdd($rqt);
+
+       echo $res."<br>".$rqt;
+
+  			}
+
+
+  	}
+
+
 ?>
 </body>
 </html>

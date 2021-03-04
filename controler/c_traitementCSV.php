@@ -14,9 +14,27 @@
 
 
           //traitement pour fournisseur P2r
-          case 'read_p2r':
-            load_csv();
-            break;
+          case 'read':
+
+
+          switch ($_SESSION['fournisseur']) {
+            case 'p2r':
+              load_csv();
+              break;
+
+            case 'Europacc':
+              echo "A cpmlété";
+
+              break;
+
+              //case 'variable':
+                // code...
+              //  break;
+
+          break;
+
+          }
+
 
         }
 
