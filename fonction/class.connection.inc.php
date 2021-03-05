@@ -1,46 +1,4 @@
 ﻿<?php
-// class connection
-// {
-// 		private static $connection = null;
-//
-// 	private function __construct()
-// 	{
-// 		echo "LA FONCTION EST CONSTRUITE";
-// 			$connection = new PDO('mysql:host=127.0.0.1;dbname=prodp2rmoto', 'root');
-// 			$connection->query("SET CHARACTER SET utf8");
-// 	}
-//
-//
-// 	public function _destruct(){
-// 		$connection = null;
-// 	}
-//
-// 	public  static function getConnection()
-// 	{
-// 		if($connection == null)
-// 		{
-// 			$connection = new connection();
-// 		}
-// 		return $connection;
-// 	}
-//
-//
-//
-//
-//
-//
-// 	public function push_into_bdd($rqt)
-// 	{
-// 		$res = $connection->exec($rqt);
-// 		return $res;
-// 	}
-//
-//
-//
-//
-// }
-
-
 
 
 
