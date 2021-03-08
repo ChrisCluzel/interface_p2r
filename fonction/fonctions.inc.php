@@ -16,7 +16,9 @@ function read($csv){
 
     }
 
+
     return $array;
+
     fclose($file);
 }
 
@@ -74,9 +76,9 @@ function read($csv){
 
 
          $rqt = "insert ignore into  produitp2r VALUES(".$ligne[0].", '".$ligne[1]."', ".$ligne[2].", ".$ligne[3].", ".$ligne[4].", ".$ligne[5].", '".$ligne[6]."', null , ".$ligne[8].",  '".$ligne[9]."','".$ligne[10]."')";
-        $res = $monPdo->push_into_bdd($rqt);
+       $res = $monPdo->push_into_bdd($rqt);
 
-       echo $res."<br>".$rqt;
+       echo "<br>".$rqt;
 
   			}
 
